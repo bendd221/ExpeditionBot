@@ -4,5 +4,6 @@ namespace DiscordExpeditionBot.Repositories;
 
 public interface IExpeditionRepository
 {
-    Task<ExpeditionTemplate?> FetchExpeditionAsync(string expeditionId);
+    Task<Expedition?> FetchExpeditionAsync(string expeditionId);
+    Task<List<Expedition>> FetchAllExpeditionTemplatesByUserId();
 }

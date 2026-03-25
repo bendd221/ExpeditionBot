@@ -1,4 +1,5 @@
 using DiscordExpeditionBot.Models;
+using DiscordExpeditionBot.Models.Expedition;
 using DiscordExpeditionBot.Repositories;
 
 namespace DiscordExpeditionBot.Services;
@@ -27,5 +28,11 @@ public class ExpeditionManager(IUserRepository userRepo, ICharacterRepository ch
     public async Task<User?> GetUserAsync(ulong discordGuid)
     {
         return await userRepo.GetUserByDiscordGuid(discordGuid);
+    }
+    
+    public async Task<List<ExpeditionTemplate>> GetExpeditionTemplatesAsync()
+    {
+        
+        expRepo.FetchAllExpeditionTemplatesByUserId()
     }
 }

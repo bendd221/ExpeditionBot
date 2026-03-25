@@ -12,5 +12,5 @@ public class ExpeditionTemplate
     public ExpeditionLayout Layout { get; set; } = new();
     
     [BsonRepresentation(BsonType.ObjectId)]
-    public required string CreatorDiscordGuid { get; set; }    
+    public required string UserId { get; set; }    
 }
